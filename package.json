@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.0",
+    "postcss-loader": "^8.1.1",
+    "tailwindcss": "^3.4.10"
+  },
+  "devDependencies": {
+    "@webpack-cli/generators": "^3.0.7",
+    "mini-css-extract-plugin": "^2.9.1",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  },
+  "version": "1.0.0",
+  "description": "My webpack project",
+  "name": "my-webpack-project",
+  "scripts": {
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch",
+    "serve": "webpack serve"
+  }
+}
