@@ -1,32 +1,33 @@
-// Generated using webpack-cli https://github.com/webpack/webpack-cli
-
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const stylesHandler = MiniCssExtractPlugin.loader;
 
-const isProduction = process.env.NODE_ENV == "production";
+const isProduction = process.env.NODE_ENV === "production";
 
 const config = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "/dist"),
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js"
   },
   devServer: {
     open: true,
     host: "localhost",
+    hot: true, // Enable Hot Module Replacement (HMR)
     devMiddleware: {
-      writeToDisk: true,
+      writeToDisk: false, // Ensure it serves files from memory in development
+    },
+    static: {
+      directory: path.join(__dirname, "dist"), // Serve files from 'dist' directory
+      watch: true, // Watch for changes in static files
     },
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "index.html",
     }),
-
     new MiniCssExtractPlugin(),
-    // Add your plugins here
-    // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
   module: {
     rules: [
@@ -38,9 +39,6 @@ const config = {
         test: /\.css$/i,
         use: [stylesHandler, "css-loader", "postcss-loader"],
       },
-
-      // Add your rules for custom modules here
-      // Learn more about loaders from https://webpack.js.org/loaders/
     ],
   },
 };
