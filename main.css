@@ -1061,8 +1061,10 @@ video {
     white-space: nowrap; /* Keeps the text in a single line */
     border-right: .15em solid orange; /* Creates the cursor effect */
     animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
-    overflow-wrap: break-word;
-    white-space: normal;
+    max-width: 100%; /* Maksimal lebar 100% dari kontainer */
+    overflow-wrap: break-word; /* Memecah kata jika terlalu panjang */
+    white-space: normal; /* Mengizinkan teks membungkus ke baris baru */
+    font-size: calc(1rem + 1vw); /* Ukuran font responsif */
   }
   
 
