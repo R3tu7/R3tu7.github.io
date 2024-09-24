@@ -1064,7 +1064,7 @@ video {
     max-width: 100%; /* Maksimal lebar 100% dari kontainer */
     overflow-wrap: break-word; /* Memecah kata jika terlalu panjang */
     white-space: normal; /* Mengizinkan teks membungkus ke baris baru */
-    font-size: calc(1rem + 1vw); /* Ukuran font responsif */
+   
   }
   
 
