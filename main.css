@@ -1055,17 +1055,7 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.typewriter {
-    display: inline-block;
-    overflow: hidden; /* Ensures the text does not overflow */
-    white-space: nowrap; /* Keeps the text in a single line */
-    border-right: .15em solid orange; /* Creates the cursor effect */
-    animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
-    max-width: 100%; /* Maksimal lebar 100% dari kontainer */
-    overflow-wrap: break-word; /* Memecah kata jika terlalu panjang */
-    white-space: normal; /* Mengizinkan teks membungkus ke baris baru */
-   
-  }
+
   
 
   
