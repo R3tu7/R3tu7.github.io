@@ -1062,6 +1062,11 @@ video {
     border-right: .15em solid orange; /* Creates the cursor effect */
     animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
   }
+  @media (max-width: 600px) {
+    .typewriter {
+        font-size: 1.5rem; /* Atur ukuran font sesuai kebutuhan */
+    }
+}
   
   @keyframes typing {
     from { width: 0; }
