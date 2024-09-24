@@ -14,10 +14,7 @@ const config = {
   },
   devServer: {
     open: true,
-    host: "localhost",
-    devMiddleware: {
-      writeToDisk: true,
-    },
+    host: "localhost"
   },
   plugins: [
     new HtmlWebpackPlugin({
